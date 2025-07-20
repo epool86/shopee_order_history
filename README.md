@@ -61,15 +61,17 @@ Download all your Shopee orders in one click! Get a spreadsheet file with all yo
 
 ## 📊 What's in Your Downloaded File
 
-Your Excel file will have one row for each item you bought, with details like:
-- Order date and ID
-- Shop name
-- Product name and variant
-- How many you bought
-- How much you paid
-- Delivery status
+Your Excel file will have **one row for each item** you bought. Here's what it looks like:
 
-**Example**: If you bought 3 different items in one order, you'll get 3 rows in your Excel file.
+| Order ID | Order Date | Shop Name | Item Name | Quantity | Item Price | Total Amount | Status |
+|----------|------------|-----------|-----------|----------|------------|--------------|---------|
+| 123456789 | 2024-12-15 | TechStore Malaysia | Wireless Headphones | 1 | RM 89.90 | RM 185.80 | Delivered |
+| 123456789 | 2024-12-15 | TechStore Malaysia | Phone Case | 2 | RM 15.50 | RM 185.80 | Delivered |
+| 987654321 | 2024-12-10 | Fashion Shop | T-Shirt | 1 | RM 25.00 | RM 30.00 | Completed |
+
+**Full details include**: Order ID, Order Date, Order Status, Shop Name, Shop ID, Item Name, Model/Variant, Quantity, Item Price, Item Total, Order Subtotal, Order Final Total, Item ID, and Tracking Info.
+
+**Example**: If you bought 2 items in one order, you'll get 2 rows in your Excel file (both with the same Order ID).
 
 ## ❌ Problems & Solutions
 
