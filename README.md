@@ -1,123 +1,121 @@
-# Shopee Purchase History Extractor
+# Shopee Order Extractor
 
-Extract and export your complete Shopee purchase history with one click. Get a beautiful summary table and download your data as a CSV file for Excel.
+Download all your Shopee orders in one click! Get a spreadsheet file with all your purchase history for easy viewing in Excel.
 
-## ✨ What This Extension Does
+## What This Does
 
-- **🔄 Fetch Orders**: Automatically downloads all your Shopee orders with one button click
-- **📊 Live Summary**: Shows real-time totals (orders, items, spending) as data is collected
-- **📋 CSV Export**: Downloads spreadsheet file with all your order details
-- **🎨 Beautiful Interface**: Professional dark green design that's easy to use
+✅ **Downloads ALL your Shopee orders** automatically  
+✅ **Shows live totals** as it works (orders, items, money spent)  
+✅ **Creates Excel file** with all your order details  
+✅ **Works with any amount** of orders (even thousands)
 
-## 📥 Installation (Step by Step)
+## 📥 How to Install (Step by Step)
 
 ### Step 1: Download the Extension
-1. **Download this folder** to your computer (ask someone to help download the ZIP file)
-2. **Extract/Unzip** the folder to your Desktop or Downloads folder
-3. **Remember the folder location** - you'll need it in Step 3
+1. **Click the green "Code" button** at the top of this page
+2. **Click "Download ZIP"** from the menu
+3. **Save the ZIP file** to your Downloads folder
+4. **Right-click the ZIP file** → **"Extract All"** or **"Unzip"**
+5. **Remember where you extracted it** (you'll need this folder)
 
-### Step 2: Open Chrome Extensions Page
-1. **Open Google Chrome** browser
-2. **Type this in the address bar**: `chrome://extensions/`
-3. **Press Enter** - you'll see a page with all your extensions
+### Step 2: Open Chrome Extensions
+1. **Open Google Chrome**
+2. **Type this exactly**: `chrome://extensions/`
+3. **Press Enter**
 
-### Step 3: Enable Developer Mode
-1. **Look at the top right** of the extensions page
-2. **Find a toggle switch** that says "Developer mode"
-3. **Click the toggle** to turn it ON (it should turn blue/green)
+### Step 3: Turn On Developer Mode
+1. **Look at the top-right corner** of the page
+2. **Find the switch that says "Developer mode"**
+3. **Click it to turn it ON** (it should turn blue)
 
-### Step 4: Load the Extension
-1. **Click "Load unpacked"** button (appears after enabling developer mode)
-2. **Find and select** the extension folder you downloaded in Step 1
-3. **Click "Select Folder"** or "Open"
-4. **Success!** The extension icon should appear in your Chrome toolbar
+### Step 4: Add the Extension
+1. **Click "Load unpacked"** (appears after Step 3)
+2. **Find the folder you extracted** in Step 1
+3. **Click on the folder** to select it
+4. **Click "Select Folder"**
+5. **Done!** You should see the extension in your list
 
-### Step 5: Verify Installation
-- Look for the extension icon in your Chrome toolbar
-- If you don't see it, click the puzzle piece icon (⋯) and pin the extension
-
-## 📖 How to Use (Simple Steps)
+## 📱 How to Use
 
 ### Step 1: Go to Your Orders
-1. **Visit Shopee**: Go to [shopee.com.my](https://shopee.com.my)
-2. **Login** to your account
-3. **Click "My Purchase"** or go to your order history
-4. **Wait for page to load** completely
+1. **Visit [Shopee.com.my](https://shopee.com.my)**
+2. **Login to your account**
+3. **Click "Me"** at the bottom
+4. **Click "My Purchase"** or "To Pay/To Ship/To Receive/Completed"
 
-### Step 2: Start Extraction
-1. **Look for a black button** on the right side that says "🔄 Fetch Orders"
-2. **Click the button** once
-3. **Wait and watch** - the button will change to show progress
-4. **Don't close the browser** while it's working
+### Step 2: Use the Extension
+1. **Look for a black button** on the right side: "🔄 Fetch Orders"
+2. **Click it once** and wait
+3. **Don't close your browser** while it's working
 
-### Step 3: Watch the Progress
-- **Status updates** will show: "Connecting..." → "Looking for orders..." 
-- **Green table appears** showing your totals in real-time
-- **Numbers update** as more orders are found
-- **Process completes** when it says "Reached the end!"
+### Step 3: Watch It Work
+- You'll see messages like "Connecting..." and "Looking for orders..."
+- A green table will appear showing your totals
+- Numbers will update as it finds more orders
+- It stops when it says "Reached the end!"
 
-### Step 4: Download Your Data
-1. **Green download button appears** saying "📊 Download CSV File"
-2. **Click the download button**
-3. **File saves** to your Downloads folder
-4. **Open with Excel** or Google Sheets to view your data
+### Step 4: Download Your File
+1. **Click the green button**: "📊 Download CSV File"
+2. **File automatically saves** to your Downloads folder
+3. **Open it with Excel** or Google Sheets
 
-## 📊 What's in the Downloaded File
+## 📊 What's in Your Downloaded File
 
-Your CSV file contains **one row per item** (not per order) with these details:
+Your Excel file will have one row for each item you bought, with details like:
+- Order date and ID
+- Shop name
+- Product name and variant
+- How many you bought
+- How much you paid
+- Delivery status
 
-- **Order Information**: ID, date, status, total amount
-- **Shop Details**: Shop name and ID  
-- **Item Details**: Product name, variant, quantity, price
-- **Tracking**: Delivery status and information
+**Example**: If you bought 3 different items in one order, you'll get 3 rows in your Excel file.
 
-**Example**: If you bought 3 items in one order, you'll get 3 rows in the CSV file.
+## ❌ Problems & Solutions
 
-## 🚨 Common Problems & Solutions
+### "I can't find the button"
+- Make sure you're on the "My Purchase" page
+- Try refreshing the page (press F5)
+- Wait 10 seconds for the page to fully load
 
-### ❌ "Can't find the button"
-- Make sure you're on the Shopee purchase history page
-- Refresh the page and wait for it to load completely
-- Check if the extension is enabled in Chrome
-
-### ❌ "Unable to connect" error
+### "Nothing happens when I click"
 - Make sure you're logged into Shopee
-- Try refreshing the page and clicking the button again
 - Check your internet connection
+- Try scrolling down a little first, then click the button
 
-### ❌ "No orders found" 
-- Make sure you have orders in your Shopee account
-- Try scrolling down on the purchase page first
-- Wait a few seconds and try again
+### "It says 'Unable to connect'"
+- You might be logged out of Shopee - log back in
+- Refresh the page and try again
+- Close other browser tabs
 
-### ❌ Extension not working
+### "The extension disappeared"
 - Go back to `chrome://extensions/`
 - Make sure the Shopee extension is turned ON
-- Try disabling and re-enabling the extension
+- If it's OFF, click the toggle to turn it ON
 
-## 💡 Tips for Best Results
+## 💡 Important Tips
 
-- **Use stable internet**: Don't use during poor connection
-- **Be patient**: Large accounts (500+ orders) may take 10-15 minutes
-- **Don't navigate away**: Stay on the page while it's working
-- **Close other tabs**: For better performance
-- **One at a time**: Don't click the button multiple times
+- **Be patient**: If you have many orders, it might take 10-15 minutes
+- **Stay on the page**: Don't browse to other websites while it's working
+- **Good internet**: Works best with stable internet connection
+- **One click only**: Don't click the button multiple times
 
-## 🔒 Privacy & Safety
+## 🔒 Is This Safe?
 
-- **Local only**: Everything happens in your browser
-- **No external servers**: Your data never leaves your computer  
-- **Uses your login**: Works with your existing Shopee session
-- **Safe to use**: Only reads data you already have access to
+✅ **Yes, completely safe!**
+- Only reads data you already can see on Shopee
+- Everything stays on your computer
+- No passwords or personal info is stored
+- Only you can see your data
 
 ## 📞 Need Help?
 
-If you're having trouble:
-1. **Ask a tech-savvy friend** to help with installation
-2. **Try the troubleshooting steps** above
-3. **Make sure Chrome is updated** to the latest version
-4. **Restart Chrome** and try again
+If you're stuck:
+1. **Ask a computer-savvy friend** to help with installation
+2. **Make sure Chrome is updated** (Help → About Google Chrome)
+3. **Try restarting Chrome** and doing it again
+4. **Double-check each step** above
 
 ---
 
-**Note**: This extension is for personal use only. Please use responsibly and respect Shopee's terms of service.
+**Important**: This is for your personal use only. Please be respectful and don't overuse it.
