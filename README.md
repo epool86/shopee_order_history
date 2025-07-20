@@ -61,17 +61,17 @@ Download all your Shopee orders in one click! Get a spreadsheet file with all yo
 
 ## 📊 What's in Your Downloaded File
 
-Your Excel file will have **one row for each item** you bought. Here's what it looks like:
+Your **CSV file** (opens in Excel) will have **one row for each item** you bought. Here's what it looks like:
 
-| Order ID | Order Date | Shop Name | Item Name | Quantity | Item Price | Total Amount | Status |
-|----------|------------|-----------|-----------|----------|------------|--------------|---------|
-| 123456789 | 2024-12-15 | TechStore Malaysia | Wireless Headphones | 1 | RM 89.90 | RM 185.80 | Delivered |
-| 123456789 | 2024-12-15 | TechStore Malaysia | Phone Case | 2 | RM 15.50 | RM 185.80 | Delivered |
-| 987654321 | 2024-12-10 | Fashion Shop | T-Shirt | 1 | RM 25.00 | RM 30.00 | Completed |
+| Order ID | Order Date | Order Status | Shop Name | Item Name | Model/Variant | Quantity | Item Price (RM) | Order Final Total (RM) | Tracking Info |
+|----------|------------|--------------|-----------|-----------|---------------|----------|-----------------|----------------------|---------------|
+| 123456789012345 | 15/12/2024 | Completed | TechStore | Wireless Bluetooth Headphones | Black | 1 | 89.90 | 95.90 | Package delivered |
+| 123456789012345 | 15/12/2024 | Completed | TechStore | Phone Case | Clear | 2 | 12.50 | 95.90 | Package delivered |
+| 987654321098765 | 10/12/2024 | Completed | Fashion Shop | Cotton T-Shirt | Size M, Blue | 1 | 25.00 | 30.00 | Delivered successfully |
 
-**Full details include**: Order ID, Order Date, Order Status, Shop Name, Shop ID, Item Name, Model/Variant, Quantity, Item Price, Item Total, Order Subtotal, Order Final Total, Item ID, and Tracking Info.
+**All 14 columns include**: Order ID, Order Date, Order Status, Shop Name, Shop ID, Item Name, Model/Variant, Quantity, Item Price (RM), Item Total (RM), Order Subtotal (RM), Order Final Total (RM), Item ID, and Tracking Info.
 
-**Example**: If you bought 2 items in one order, you'll get 2 rows in your Excel file (both with the same Order ID).
+**Example**: If you bought 2 items in one order, you'll get 2 rows in your CSV file (both with the same Order ID and final total).
 
 ## ❌ Problems & Solutions
 
