@@ -1001,6 +1001,7 @@ async function directFetchWithAuth() {
 // Add single action button
 function addFetchButton() {
   const container = document.createElement('div');
+  container.id = 'shopee-extension-container'; // Add ID for detection
   container.style.cssText = `
     position: fixed;
     top: 80px;
@@ -1317,9 +1318,163 @@ function addFetchButton() {
 // Skip script injection due to CSP restrictions
 console.log('🔧 Content script loaded, using direct fetch approach');
 
-// Start when DOM is ready for UI elements
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
+// Function to check if we're on the purchase history page
+function isPurchaseHistoryPage() {
+  return window.location.href.includes('/user/purchase');
 }
+
+// Function to initialize or remove extension based on current page
+function handlePageChange() {
+  if (isPurchaseHistoryPage()) {
+    // Check if extension is already initialized
+    if (!document.getElementById('shopee-extension-container')) {
+      console.log('🔄 Purchase history page detected, initializing extension...');
+      init();
+    }
+  } else {
+    // Remove extension UI if we're not on purchase page
+    const container = document.getElementById('shopee-extension-container');
+    if (container) {
+      console.log('🚫 Left purchase page, removing extension UI...');
+      container.remove();
+    }
+  }
+}
+
+// Add container ID to make it detectable
+function init() {
+  console.log('Shopee Purchase History Extractor loaded');
+  console.log('Current URL:', window.location.href);
+  console.log('Page title:', document.title);
+  
+  // Skip script injection due to CSP, use direct approach instead
+  console.log('🔧 Using direct fetch approach (CSP prevents script injection)');
+  
+  // Add the fetch button
+  addFetchButton();
+}
+
+// More aggressive URL monitoring for SPAs
+let currentUrl = window.location.href;
+let urlCheckInterval;
+
+// Function to start URL polling
+function startUrlPolling() {
+  // Clear any existing interval
+  if (urlCheckInterval) {
+    clearInterval(urlCheckInterval);
+  }
+  
+  // Poll every 500ms for URL changes
+  urlCheckInterval = setInterval(() => {
+    if (currentUrl !== window.location.href) {
+      const oldUrl = currentUrl;
+      currentUrl = window.location.href;
+      console.log('🔍 URL changed from:', oldUrl, 'to:', currentUrl);
+      
+      // Multiple checks with different delays to ensure page content is loaded
+      setTimeout(handlePageChange, 500);
+      setTimeout(handlePageChange, 1000);
+      setTimeout(handlePageChange, 2000);
+    }
+  }, 500);
+}
+
+// Enhanced MutationObserver for DOM changes
+const pageObserver = new MutationObserver((mutations) => {
+  // Check for significant page changes
+  let significantChange = false;
+  
+  mutations.forEach((mutation) => {
+    // Look for changes that might indicate page navigation
+    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          // Check for main content containers or navigation elements
+          if (node.classList && (
+            node.classList.contains('page-content') ||
+            node.classList.contains('main-content') ||
+            node.tagName === 'MAIN' ||
+            node.id === 'main' ||
+            (node.innerHTML && node.innerHTML.includes('purchase'))
+          )) {
+            significantChange = true;
+          }
+        }
+      });
+    }
+  });
+  
+  if (significantChange) {
+    console.log('📄 Significant page change detected');
+    setTimeout(handlePageChange, 1000);
+    setTimeout(handlePageChange, 2000);
+  }
+});
+
+// Start observing with broader scope
+if (document.body) {
+  pageObserver.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: false,
+    attributeOldValue: false,
+    characterData: false,
+    characterDataOldValue: false
+  });
+}
+
+// Listen for various navigation events
+window.addEventListener('popstate', () => {
+  console.log('🔙 Popstate event detected');
+  setTimeout(handlePageChange, 500);
+  setTimeout(handlePageChange, 1500);
+});
+
+// Listen for pushstate/replacestate (common in SPAs)
+const originalPushState = history.pushState;
+const originalReplaceState = history.replaceState;
+
+history.pushState = function(...args) {
+  originalPushState.apply(history, args);
+  console.log('🔄 PushState detected');
+  setTimeout(handlePageChange, 500);
+  setTimeout(handlePageChange, 1500);
+};
+
+history.replaceState = function(...args) {
+  originalReplaceState.apply(history, args);
+  console.log('🔄 ReplaceState detected');
+  setTimeout(handlePageChange, 500);
+  setTimeout(handlePageChange, 1500);
+};
+
+// Listen for hashchange
+window.addEventListener('hashchange', () => {
+  console.log('🔗 Hash change detected');
+  setTimeout(handlePageChange, 500);
+});
+
+// Start URL polling
+startUrlPolling();
+
+// Initial check and setup with multiple attempts
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    handlePageChange();
+    setTimeout(handlePageChange, 1000);
+    setTimeout(handlePageChange, 3000);
+  });
+} else {
+  handlePageChange();
+  setTimeout(handlePageChange, 1000);
+  setTimeout(handlePageChange, 3000);
+}
+
+// Also check periodically in case we miss navigation
+setInterval(() => {
+  if (isPurchaseHistoryPage() && !document.getElementById('shopee-extension-container')) {
+    console.log('🔄 Periodic check: Extension missing on purchase page, reinitializing...');
+    handlePageChange();
+  }
+}, 5000); // Check every 5 seconds

@@ -16,7 +16,7 @@
   
   "content_scripts": [
     {
-      "matches": ["*://shopee.com.my/user/purchase*"],
+      "matches": ["*://shopee.com.my/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
