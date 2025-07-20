@@ -40,8 +40,8 @@ Download all your Shopee orders in one click! Get a spreadsheet file with all yo
 ### Step 1: Go to Your Orders
 1. **Visit [Shopee.com.my](https://shopee.com.my)**
 2. **Login to your account**
-3. **Click "Me"** at the bottom
-4. **Click "My Purchase"** or "To Pay/To Ship/To Receive/Completed"
+3. **Click your username** at the top-right corner of the page
+4. **Click "My Purchase"** from the dropdown menu
 
 ### Step 2: Use the Extension
 1. **Look for a black button** on the right side: "🔄 Fetch Orders"
