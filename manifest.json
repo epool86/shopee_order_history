@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee Purchase History Extractor",
+  "version": "1.0",
+  "description": "Extract and organize your Shopee purchase history",
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "*://shopee.com.my/*",
+    "*://*.shopee.com.my/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["*://shopee.com.my/user/purchase*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["debug/data.json"],
+      "matches": ["*://shopee.com.my/*"]
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Shopee Purchase History"
+  }
+}

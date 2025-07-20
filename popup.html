@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 600px;
+      height: 500px;
+      margin: 0;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ee4d2d;
+    }
+    
+    .stats {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .search-box {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    
+    .btn {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      background: #ee4d2d;
+      color: white;
+    }
+    
+    .btn:hover {
+      background: #d63384;
+    }
+    
+    .btn-secondary {
+      background: #6c757d;
+    }
+    
+    .purchase-list {
+      height: 350px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      border-radius: 4px;
+    }
+    
+    .purchase-item {
+      padding: 12px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      gap: 12px;
+    }
+    
+    .purchase-item:last-child {
+      border-bottom: none;
+    }
+    
+    .item-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+      object-fit: cover;
+      background: #f5f5f5;
+    }
+    
+    .item-details {
+      flex: 1;
+    }
+    
+    .item-name {
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 13px;
+      line-height: 1.3;
+      max-height: 2.6em;
+      overflow: hidden;
+    }
+    
+    .item-shop {
+      color: #666;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+    
+    .item-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #888;
+    }
+    
+    .item-price {
+      font-weight: 500;
+      color: #ee4d2d;
+      font-size: 13px;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 50px 20px;
+      color: #666;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    
+    .footer {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">Shopee Purchase History</div>
+    <div class="stats" id="stats">Loading...</div>
+  </div>
+  
+  <div class="controls">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search products, shops...">
+    <button class="btn" id="refreshBtn">Refresh</button>
+    <button class="btn btn-secondary" id="exportBtn">Export CSV</button>
+  </div>
+  
+  <div class="purchase-list" id="purchaseList">
+    <div class="loading">Loading purchase history...</div>
+  </div>
+  
+  <div class="footer">
+    Go to Shopee purchase history page and click "Extract Purchase Data" to collect data
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
