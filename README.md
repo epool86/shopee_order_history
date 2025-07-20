@@ -1,209 +1,123 @@
 # Shopee Purchase History Extractor
 
-A professional Chrome browser extension that automatically extracts and exports your complete Shopee purchase history with real-time analytics and CSV export.
+Extract and export your complete Shopee purchase history with one click. Get a beautiful summary table and download your data as a CSV file for Excel.
 
-## ✨ Features
+## ✨ What This Extension Does
 
-### 🚀 **One-Click Data Extraction**
-- **Automatic Fetching**: Retrieves all your orders with a single button click
-- **Smart Authentication**: Automatically extracts login credentials from your active session
-- **Unlimited Orders**: Supports accounts with hundreds or thousands of orders
-- **Real-time Progress**: Live updates showing current progress and totals
+- **🔄 Fetch Orders**: Automatically downloads all your Shopee orders with one button click
+- **📊 Live Summary**: Shows real-time totals (orders, items, spending) as data is collected
+- **📋 CSV Export**: Downloads spreadsheet file with all your order details
+- **🎨 Beautiful Interface**: Professional dark green design that's easy to use
 
-### 📊 **Beautiful Analytics Dashboard**
-- **Live Summary Table**: See totals update in real-time as data is fetched
-- **Professional Dark Green Theme**: Modern, elegant interface design
-- **Order Count**: Total number of orders found
-- **Item Count**: Total individual items across all orders
-- **Total Spending**: Complete spending amount in RM with proper formatting
+## 📥 Installation (Step by Step)
 
-### 📋 **Advanced CSV Export**
-- **Item-Level Data**: Each row represents one individual item (not order)
-- **Complete Context**: Every item includes full order information
-- **Comprehensive Columns**: 14 detailed fields including dates, prices, and tracking
-- **Excel Ready**: Perfect for spreadsheet analysis and pivot tables
+### Step 1: Download the Extension
+1. **Download this folder** to your computer (ask someone to help download the ZIP file)
+2. **Extract/Unzip** the folder to your Desktop or Downloads folder
+3. **Remember the folder location** - you'll need it in Step 3
 
-### 🔒 **Smart & Secure**
-- **Session-Based**: Uses your existing login session
-- **No Hardcoded Credentials**: Dynamically extracts authentication tokens
-- **Local Processing**: All data processing happens in your browser
-- **Privacy First**: No data sent to external servers
+### Step 2: Open Chrome Extensions Page
+1. **Open Google Chrome** browser
+2. **Type this in the address bar**: `chrome://extensions/`
+3. **Press Enter** - you'll see a page with all your extensions
 
-## 🎯 Installation
+### Step 3: Enable Developer Mode
+1. **Look at the top right** of the extensions page
+2. **Find a toggle switch** that says "Developer mode"
+3. **Click the toggle** to turn it ON (it should turn blue/green)
 
-1. **Download Extension**: Clone or download this repository
-2. **Open Chrome Extensions**: Go to `chrome://extensions/`
-3. **Enable Developer Mode**: Toggle the switch in the top right
-4. **Load Extension**: Click "Load unpacked" and select the extension folder
-5. **Ready to Use**: Extension icon appears in your toolbar
+### Step 4: Load the Extension
+1. **Click "Load unpacked"** button (appears after enabling developer mode)
+2. **Find and select** the extension folder you downloaded in Step 1
+3. **Click "Select Folder"** or "Open"
+4. **Success!** The extension icon should appear in your Chrome toolbar
 
-## 📖 How to Use
+### Step 5: Verify Installation
+- Look for the extension icon in your Chrome toolbar
+- If you don't see it, click the puzzle piece icon (⋯) and pin the extension
 
-### Step 1: Navigate to Orders
-Go to your [Shopee Purchase History](https://shopee.com.my/user/purchase) page
+## 📖 How to Use (Simple Steps)
+
+### Step 1: Go to Your Orders
+1. **Visit Shopee**: Go to [shopee.com.my](https://shopee.com.my)
+2. **Login** to your account
+3. **Click "My Purchase"** or go to your order history
+4. **Wait for page to load** completely
 
 ### Step 2: Start Extraction
-1. **Look for the Button**: A black "🔄 Fetch Orders" button appears on the right side
-2. **Click to Start**: Button changes to "Preparing..." then "Downloading..."
-3. **Watch Progress**: Live status updates and real-time analytics table
+1. **Look for a black button** on the right side that says "🔄 Fetch Orders"
+2. **Click the button** once
+3. **Wait and watch** - the button will change to show progress
+4. **Don't close the browser** while it's working
 
-### Step 3: Review Summary
-- **Beautiful Table**: Dark green themed summary with your totals
-- **Live Updates**: Numbers update as each batch of orders is processed
-- **Final Totals**: Complete count of orders, items, and spending
+### Step 3: Watch the Progress
+- **Status updates** will show: "Connecting..." → "Looking for orders..." 
+- **Green table appears** showing your totals in real-time
+- **Numbers update** as more orders are found
+- **Process completes** when it says "Reached the end!"
 
-### Step 4: Download Data
-- **CSV Export**: Click "📊 Download CSV File" button
-- **Instant Download**: File saves to your downloads folder
-- **Spreadsheet Ready**: Open in Excel, Google Sheets, or any CSV viewer
+### Step 4: Download Your Data
+1. **Green download button appears** saying "📊 Download CSV File"
+2. **Click the download button**
+3. **File saves** to your Downloads folder
+4. **Open with Excel** or Google Sheets to view your data
 
-## 📊 CSV Data Structure
+## 📊 What's in the Downloaded File
 
-Each row in the exported CSV represents **one individual item** with complete order context:
+Your CSV file contains **one row per item** (not per order) with these details:
 
-| Column | Description | Example |
-|--------|-------------|---------|
-| Order ID | Shopee order identifier | 123456789012345 |
-| Order Date | Date order was placed | 2024-12-15 |
-| Order Status | Current order status | Completed |
-| Shop Name | Name of the seller | TechStore Malaysia |
-| Shop ID | Unique shop identifier | 987654321 |
-| Item Name | Full product name | Wireless Bluetooth Headphones |
-| Model/Variant | Product variant | Black, 32GB |
-| Quantity | Number of items | 2 |
-| Item Price (RM) | Price per unit | 89.90 |
-| Item Total (RM) | Total for this item | 179.80 |
-| Order Subtotal (RM) | Order subtotal | 179.80 |
-| Order Final Total (RM) | Final order amount | 185.80 |
-| Item ID | Unique item identifier | 456789012 |
-| Tracking Info | Delivery status | Package delivered |
+- **Order Information**: ID, date, status, total amount
+- **Shop Details**: Shop name and ID  
+- **Item Details**: Product name, variant, quantity, price
+- **Tracking**: Delivery status and information
 
-## 🎨 Interface Features
+**Example**: If you bought 3 items in one order, you'll get 3 rows in the CSV file.
 
-### Professional Design
-- **Fixed Width Layout**: Consistent 320px width for clean appearance
-- **Borderless Design**: Modern, professional styling without visual clutter
-- **Dark Green Theme**: Beautiful gradient table with excellent readability
-- **Smooth Animations**: Hover effects and transitions for premium feel
+## 🚨 Common Problems & Solutions
 
-### User-Friendly Messages
-- **Clear Progress**: "Connecting to your Shopee account..."
-- **Real-time Updates**: "Page 5: Found 3 orders! Total: 23 orders"
-- **Success Confirmation**: "Reached the end! Found 47 orders across 10 pages"
-- **Error Handling**: "Unable to connect. Please make sure you are logged in"
+### ❌ "Can't find the button"
+- Make sure you're on the Shopee purchase history page
+- Refresh the page and wait for it to load completely
+- Check if the extension is enabled in Chrome
 
-## 🔧 Technical Specifications
-
-### Architecture
-- **Manifest V3**: Latest Chrome extension standard
-- **Content Script**: Runs on Shopee purchase history pages
-- **Real-time Processing**: Live data extraction and analysis
-- **Dynamic Authentication**: Automatic token extraction from page session
-
-### Data Processing
-- **Paginated Fetching**: Retrieves 5 orders per request (natural Shopee behavior)
-- **Rate Limiting**: 1.5-second delays between requests for respectful usage
-- **Error Recovery**: Graceful handling of authentication and network issues
-- **Memory Efficient**: Processes large datasets without performance impact
-
-### Compatibility
-- **Shopee Malaysia**: Specifically designed for shopee.com.my
-- **Chrome Browser**: Optimized for Chrome (Manifest V3)
-- **Large Accounts**: Supports up to 1,000 orders (200 pages × 5 orders)
-- **All Order Types**: Works with completed, cancelled, and pending orders
-
-## 🛡️ Privacy & Security
-
-### Data Protection
-- **Local Only**: All processing happens in your browser
-- **No External Servers**: Data never leaves your computer
-- **Session Based**: Uses your existing login session
-- **Temporary Storage**: No permanent storage of sensitive data
-
-### Authentication
-- **Dynamic Token Extraction**: Reads authentication from your active session
-- **No Stored Credentials**: Never saves or stores login information
-- **Automatic Expiration**: Tokens refresh with each session
-- **Secure Communication**: All requests use HTTPS
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-**❌ "Unable to connect" Error**
-- Ensure you're logged into Shopee
-- Refresh the purchase history page
+### ❌ "Unable to connect" error
+- Make sure you're logged into Shopee
+- Try refreshing the page and clicking the button again
 - Check your internet connection
 
-**❌ "Access denied" Error**
-- Your session may have expired
-- Log out and log back into Shopee
-- Clear browser cache and try again
+### ❌ "No orders found" 
+- Make sure you have orders in your Shopee account
+- Try scrolling down on the purchase page first
+- Wait a few seconds and try again
 
-**❌ No orders found**
-- Make sure you have orders in your purchase history
-- Try manually scrolling down to load some orders first
-- Check that you're on the correct Shopee domain (.com.my)
+### ❌ Extension not working
+- Go back to `chrome://extensions/`
+- Make sure the Shopee extension is turned ON
+- Try disabling and re-enabling the extension
 
-**❌ CSV download issues**
-- Check your browser's download settings
-- Ensure pop-ups are allowed for Shopee
-- Try downloading again after a few seconds
+## 💡 Tips for Best Results
 
-### Performance Tips
-- **Best Results**: Use on a stable internet connection
-- **Large Accounts**: Be patient - 500+ orders may take 10-15 minutes
-- **Browser Resources**: Close other tabs for better performance
-- **Session Stability**: Don't navigate away during fetching
+- **Use stable internet**: Don't use during poor connection
+- **Be patient**: Large accounts (500+ orders) may take 10-15 minutes
+- **Don't navigate away**: Stay on the page while it's working
+- **Close other tabs**: For better performance
+- **One at a time**: Don't click the button multiple times
 
-## 🎯 Use Cases
+## 🔒 Privacy & Safety
 
-### Personal Finance
-- **Spending Analysis**: Track your Shopee spending patterns
-- **Budget Planning**: Understand where your money goes
-- **Tax Records**: Maintain purchase records for business expenses
-- **Warranty Tracking**: Keep records of purchase dates for warranties
+- **Local only**: Everything happens in your browser
+- **No external servers**: Your data never leaves your computer  
+- **Uses your login**: Works with your existing Shopee session
+- **Safe to use**: Only reads data you already have access to
 
-### Business Intelligence
-- **Supplier Analysis**: Analyze which shops you buy from most
-- **Product Trends**: Track what types of products you purchase
-- **Price Monitoring**: Compare prices across different time periods
-- **Bulk Analysis**: Use pivot tables for advanced data analysis
+## 📞 Need Help?
 
-### Data Management
-- **Backup Records**: Maintain offline backup of your purchase history
-- **Cross-Platform**: Use data in Excel, Google Sheets, or databases
-- **Integration**: Import into accounting or inventory systems
-- **Reporting**: Generate custom reports for personal or business use
-
-## 📝 Changelog
-
-### Version 2.0.0 (Current)
-- ✅ Complete UI redesign with professional dark green theme
-- ✅ Real-time analytics with live updating summary table
-- ✅ CSV export with item-level granularity
-- ✅ Automatic authentication token extraction
-- ✅ Support for unlimited orders (up to 1,000)
-- ✅ Improved error handling and user feedback
-- ✅ Borderless, modern interface design
-- ✅ Proper date extraction from order timestamps
-
-### Version 1.0.0 (Legacy)
-- Basic order extraction functionality
-- JSON export format
-- Manual header configuration
-- Limited to 100 orders
-
-## 🤝 Support
-
-### Getting Help
-- **Issues**: Report bugs or request features via GitHub issues
-- **Questions**: Check the troubleshooting section first
-- **Updates**: Watch the repository for new releases
-
-### Contributing
-This is a personal project, but feedback and suggestions are welcome!
+If you're having trouble:
+1. **Ask a tech-savvy friend** to help with installation
+2. **Try the troubleshooting steps** above
+3. **Make sure Chrome is updated** to the latest version
+4. **Restart Chrome** and try again
 
 ---
 
-**⚠️ Disclaimer**: This extension is for personal use only. Please respect Shopee's terms of service and use responsibly. The extension extracts only your own purchase data that you already have access to through Shopee's interface.
+**Note**: This extension is for personal use only. Please use responsibly and respect Shopee's terms of service.
